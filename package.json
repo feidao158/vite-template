@@ -6,7 +6,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "lint:script": "eslint --ext .ts,tsx,vue --ignore-path .gitignore .",
-    "lint:style": "stylelint src/**/*.{css,less,scss,vue}"
+    "lint:style": "stylelint src/**/*.{css,less,scss,vue}",
+    "analysis": "windicss-analysis"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.0.1",
@@ -30,6 +31,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
     "husky": "^6.0.0",
+    "less": "^4.1.1",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "stylelint": "^13.13.1",
@@ -37,9 +39,11 @@
     "stylelint-config-standard": "^22.0.0",
     "typescript": "^4.2.4",
     "vite": "^2.2.3",
+    "vite-plugin-importer": "^0.2.1",
     "vite-plugin-windicss": "^0.15.10",
     "vue-tsc": "^0.0.24",
-    "windicss": "^2.5.14"
+    "windicss": "^2.5.14",
+    "windicss-analysis": "^0.2.0"
   },
   "husky": {
     "hooks": {
