@@ -1,10 +1,12 @@
 {
   "name": "vite-template",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint:script": "eslint --ext .ts,tsx,vue --ignore-path .gitignore .",
+    "lint:style": "stylelint src/**/*.{css,less,scss,vue}"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.0.1",
@@ -17,13 +19,36 @@
   },
   "devDependencies": {
     "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vitejs/plugin-vue-jsx": "^1.1.3",
     "@vue/compiler-sfc": "^3.0.5",
-    "typescript": "^4.1.3",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^7.25.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.2.4",
     "vite": "^2.2.3",
     "vite-plugin-windicss": "^0.15.10",
     "vue-tsc": "^0.0.24",
     "windicss": "^2.5.14"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,vue,tsx}": "eslint --fix",
+    "*.{css,less,scss,vue}": "stylelint --fix",
+    "*": "prettier -w -u"
   }
 }
