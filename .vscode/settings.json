@@ -2,7 +2,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.tsdk": "node_modules/typescript/lib",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -12,4 +11,8 @@
   "typescriptHero.imports.organizeOnSave": true,
   "prettier.semi": false,
   "typescriptHero.imports.insertSemicolons": false,
+  "prettier.configPath": "./.prettierrc",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

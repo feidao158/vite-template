@@ -3,7 +3,7 @@ declare interface Window {
   // extend the window
 }
 
-// declare vue files as components
+// 声明.vue文件类型提供ts支持
 declare module '*.vue' {
   import { ComponentOptions } from 'vue'
   const component: ComponentOptions
