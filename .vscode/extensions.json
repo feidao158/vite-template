@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "antfu.vite",
+    "johnsoncodehk.volar",
+    "dbaeumer.vscode-eslint",
+    "voorjaar.windicss-intellisense",
+    "csstools.postcss",
+    "rbbit.typescript-hero"
+  ]
+}
