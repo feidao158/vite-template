@@ -2,7 +2,6 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 import { defineConfig } from 'vite'
-import usePluginImport from 'vite-plugin-importer'
 import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
@@ -11,9 +10,6 @@ export default defineConfig({
     vue(),
     vueJsx({ optimize: true }),
     WindiCSS(),
-    usePluginImport({
-      libraryName: 'ant-design-vue',
-    }),
   ],
   resolve: {
     alias: {
