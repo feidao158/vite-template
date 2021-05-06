@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "noUnusedLocals": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
