@@ -6,22 +6,10 @@ import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx({ optimize: true }),
-    WindiCSS(),
-  ],
+  plugins: [vue(), vueJsx({ optimize: true }), WindiCSS()],
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      less: {
-        modifyVars: {},
-        javascriptEnabled: true,
-      },
     },
   },
 })

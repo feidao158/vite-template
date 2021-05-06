@@ -1,4 +1,3 @@
-import 'ant-design-vue/dist/antd.less'
 import 'virtual:windi-devtools'
 import 'virtual:windi.css'
 
